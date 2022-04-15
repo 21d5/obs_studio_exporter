@@ -1,4 +1,4 @@
-module github.com/lukegb/obs_studio_exporter
+module github.com/21d5/obs_studio_exporter
 
 go 1.13
 
