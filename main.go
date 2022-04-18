@@ -430,6 +430,8 @@ func registerMetrics() {
 
 //export obs_module_load
 func obs_module_load() C.bool {
+        C.obs_register_source_s(&source, C.sizeof_struct_obs_source_info)
+
 	registerMetrics()
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "You have reached obs-studio-exporter. Please leave a message after the beep.")
